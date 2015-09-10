@@ -1,13 +1,13 @@
   <header class="header">
-    <?php if ($logo): ?>
-      <h2 id="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h2>
-    <?php endif; ?>
-
-    <nav class="primary-nav">
-      <?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu')))); ?>
-    </nav>
-    
-    <?php if ($page['header']): print render($page['header']); endif; ?>
+    <div class="container">
+      <?php if ($logo): ?>
+        <h2 id="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h2>
+      <?php endif; ?>
+      <nav class="primary-nav">
+        <?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu')))); ?>
+      </nav>
+      <?php if ($page['header']): print render($page['header']); endif; ?>
+    </div>
   </header>
 <div class="container"> 
   <?php if ($page['highlight']): print render($page['highlight']); endif; ?>

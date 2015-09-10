@@ -1,6 +1,11 @@
 /**************************
  *        GLOBALS         *
  **************************/
+
+/*  #002d56 Navy 
+    #f37320 Orange
+*/
+
 body {
   background: #eee;
   color: #333332;
@@ -22,7 +27,7 @@ h4 { font-size: 20px; }
 h5 { font-size: 20px; text-transform: uppercase; }
 
 a:link, a:visited, a:active {
-  color: #333332;
+  color: #f37320;
   text-decoration: none;
 }
 a:hover {
@@ -34,19 +39,25 @@ a:hover {
  *        HEADER          *
  **************************/
 .header {
-  padding: 15px 0 0;
+  padding: 0;
   text-align: center;
-  background: url(../images/bg_header.jpg) no-repeat center center fixed; 
+  background: #002d56 url(../images/bg_header.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; 
+  border-bottom: 1px solid #fff;
 }
 
-#site-name a {
-  background: url(../images/logo_temp.png) no-repeat top left;
+#site-name {
   display: block;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+}
+#site-name a {
+  background: url(../images/logo_main.png) no-repeat top left;
+  display: block;
+  margin: 15px;
   padding: 0;
   overflow: hidden;
   text-indent: -9999px;
@@ -57,7 +68,6 @@ a:hover {
 
 .primary-nav {
   margin: 0;
-  background: #722415;
 }
 
 .primary-nav ul {
@@ -89,7 +99,7 @@ a:hover {
   left: -110px;
 }
 .footer {
-  background: #722415;
+  background: #002d56;
   color: white;
   overflow: hidden;
   text-align: center;
