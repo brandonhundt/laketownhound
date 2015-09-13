@@ -1,6 +1,18 @@
 // Non-modular or client styles for .l-footer region.
 
 
-.l-footer {}
+.l-footer {
+	position: relative;
+	z-index: 5;
+	float: left;
+	width: 100%;
+	padding: 15px 0;
+	border-top: 1px solid $line-gray;
+	margin: 0;
+	background: $navy;
+	color: #eee;
+
+	i {font-size: 1.25em;}
+}
 .l-footer-columns {}
 

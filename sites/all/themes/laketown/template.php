@@ -1,9 +1,10 @@
 <?php
-
 /**
  * Implements template_preprocess_html().
  *
  */
+
+
 //function laketown_preprocess_html(&$variables) {
 //  // Add conditional CSS for IE. To use uncomment below and add IE css file
 //  drupal_add_css(path_to_theme() . '/css/ie.css', array('weight' => CSS_THEME, 'browsers' => array('!IE' => FALSE), 'preprocess' => FALSE));
@@ -200,3 +201,9 @@ function THEMENAME_preprocess_views_view_fields(&$variables) {
 //    }
 //  }
 //}
+
+function laketown_panels_default_style_render_region($variables) {
+  $output = '';
+  $output .= implode('', $variables['panes']);
+  return $output;
+}

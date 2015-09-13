@@ -1,8 +1,8 @@
 (function ($, Drupal) {
 
-  Drupal.behaviors.STARTER = {
+  Drupal.behaviors.menu = {
     attach: function(context, settings) {
-      // Get your Yeti started.
+      $( "#main-menu.main-nav" ).removeClass( "left" ).addClass( "right" );
     }
   };
 
