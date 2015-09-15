@@ -49,7 +49,7 @@
 
     <?php if ($content['bottom']): ?>
       <div class="row">
-        <div class="large-4 columns">
+        <div class="large-12 columns">
           <?php print $content['bottom']; ?>
         </div>
       </div>

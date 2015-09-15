@@ -1,8 +1,11 @@
 // Non-modular or client styles for the .l-content region.
-
+.front .content-wrapper {
+	max-width: 900px;
+	margin: 100px auto 2em;
+}
 
 #top {
-	height: 330px;
+	height: 300px;
 	background: $navy;
 
 	.image {
@@ -37,14 +40,25 @@
 	h1 {
 		color: #fff;
 		text-shadow: 0 1px 20px $navy;
-		margin-top: 2em;
+		margin-top: 1.75em;
 	}
 
+	.pane-node-author,
+	.pane-node-created,
 	.field-name-field-teaser {
 		color: #f5f5f5;
 		text-shadow: 0 1px 20px $navy;
 		font-size: 20px;
 		line-height: 26px;
+	}
+
+	.pane-node-author {
+		span, div {display: inline-block; text-transform: capitalize;}
+		a {
+			color: #f5f5f5;
+			&:hover {color: $orange;}
+		}
+
 	}
 }
 
@@ -58,9 +72,183 @@
 		max-width: 900px;
 		margin: 0 auto;
 	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-shadow: 0 1px 0 #fff;
+	}
+
 }
 
 .pane-node-body {
 	padding: 1em 0;
+	margin: 0 0 2em;
+
+	&:after {
+		content: "\f192";
+		font-family: "foundation-icons";
+	  src: url("foundation-icons.eot");
+	  src: url("foundation-icons.eot?#iefix") format("embedded-opentype"),
+	       url("foundation-icons.woff") format("woff"),
+	       url("foundation-icons.ttf") format("truetype"),
+	       url("foundation-icons.svg#fontcustom") format("svg");
+	  font-weight: normal;
+	  font-style: normal;
+	  position: absolute;
+    left: 50%;
+    font-size: 40px;
+    color: $navy;
+    text-shadow: 0 1px 0 #fff;
+	}
 }
 
+.pane-node-field-tags {
+	font-style: italic;
+	div, span, ul, li {display: inline-block;}
+	li {list-style-type: none; margin-left: 3px; font-style: normal; font-weight: bold;}
+}
+
+.pane-node-comment-wrapper {
+	padding: 1em 0;
+	margin: 1em 0 0;
+
+	button {margin-top: 1em;}
+
+	h2 {
+	font-size: 1.5em;
+	display: block;
+	width: 100%;
+	margin-top: 1em;
+	}
+
+	.comment {
+		padding: 1em;
+		background: #fff;
+		border-bottom: 1px dotted $line-gray;
+
+		h3, .new, .permalink  {display: none;}
+		.username {font-weight: bold;}
+		.submitted {font-style: italic; margin: 0 0 1em;}
+
+		.links.inline li {
+			display: inline-block;
+			list-style-type: none;
+			margin: 0 5px 0 0;
+
+			&.comment-reply {display: none;}
+		}
+	}
+}
+
+.view-blog {
+	margin: 1em 0;
+	
+	.views-row {
+		width: 48%;
+		float: left;
+		background: $navy;
+		margin: 0 2% 2em 0;
+		position: relative;
+		overflow: hidden;
+		height: 125px;
+		border: 1px solid $navy;
+
+		@media (min-width: 768px) {
+  		height: 222px;
+  	}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			-webkit-filter: blur(3px) opacity(.75);
+  		filter: blur(3px) opacity(.75);
+		  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+		}
+
+		h2 {		
+			color: #fff;
+			text-shadow: 0 1px 20px $navy;
+			margin: 0;
+			padding: 0 15px;
+			width: 100%;
+			position: relative; 
+			z-index: 5;
+  		display: table;
+  		font-size: 1em;  
+
+  		@media (min-width: 768px) {
+  			font-size: 1.75em;
+  		}
+
+			a {
+				color: #fff;
+				display: table-cell; 
+  			vertical-align: middle; 
+  			text-align: center;
+  			height: 125px;
+
+				@media (min-width: 768px) {
+		  		height: 222px;
+		  	}
+  		}
+		}
+	}
+}
+
+.view-testimonials {
+	margin: 1em 0;
+
+	.views-row {
+		width: 48%;
+		float: left;
+		background: #fff;
+		box-shadow: 0 1px 10px #aaa;
+		-moz-box-shadow: 0 1px 10px #aaa;
+		-webkit-box-shadow: 0 1px 10px #aaa;
+		margin: 0 2% 2em 0;
+		padding: 75px 30px 30px;
+		position: relative;
+
+		@media (max-width: 768px) {
+			width: 100%;
+			margin: 0 0 2em;
+		}	
+
+		&:before {
+			content: "\f192";
+			font-family: "foundation-icons";
+		  src: url("foundation-icons.eot");
+		  src: url("foundation-icons.eot?#iefix") format("embedded-opentype"),
+		       url("foundation-icons.woff") format("woff"),
+		       url("foundation-icons.ttf") format("truetype"),
+		       url("foundation-icons.svg#fontcustom") format("svg");
+		  font-weight: normal;
+		  font-style: normal;
+		  position: absolute;
+	    left: 47%;
+	    top: 20px;
+	    font-size: 40px;
+	    color: $navy;
+	    text-shadow: 0 1px 0 #fff;
+		}
+
+		.views-field-field-name {
+			font-weight: bold;
+		}
+	}
+}
+
+.view-gallery {
+	margin: 1em 0;
+
+	.views-row {
+		float: left;
+		width: 31%;
+		margin: 0 2% 2em 0;
+	}
+}
