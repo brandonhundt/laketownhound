@@ -41,7 +41,8 @@
 
     <?php if ($site_name) :?>
       <div class="copyright large-12 columns">
-        &copy; <?php print date('Y') . ' ' . check_plain($site_name) . ' ' . t('All rights reserved.'); ?> <i class="fi-paw right"></i> 
+        <p><i class="fi-paw left"></i> Lake Town Hound Mobile Grooming Salon <span class="right">262-729-7720 <i class="fi-telephone right"></i></span></p>
+        <p><small>&copy; <?php print date('Y') . ' ' . check_plain($site_name) . ' ' . t('All rights reserved.'); ?></small></p>
       </div>
     <?php endif; ?>
   </footer>

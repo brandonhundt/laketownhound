@@ -1,18 +1,40 @@
 // Non-modular or client styles for .l-footer region.
-
-
 .l-footer {
 	position: relative;
 	z-index: 5;
 	float: left;
 	width: 100%;
-	padding: 15px 0;
+	padding: 15px;
 	border-top: 1px solid $line-gray;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
 	margin: 0;
 	background: $navy;
 	color: #eee;
 
-	i {font-size: 1.25em;}
+	i {
+		margin-left: 10px;
+		font-size: 1.5em;
+		margin-top: -6px;
+	}
+
+	p {
+		color: #eee;
+		font-family: $ff-serif;
+		margin: 0 0 .5em;
+		font-weight: bold;
+
+		i.left {
+			margin-right: 10px;
+			margin-left: 0;
+		}
+		small {
+			font-size: 80%;
+			color: #97c3eb;
+			font-weight: normal;
+		}
+	}
 }
 .l-footer-columns {}
 
