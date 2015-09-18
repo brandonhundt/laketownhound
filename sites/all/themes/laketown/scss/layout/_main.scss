@@ -127,6 +127,13 @@
 	}
 }
 
+.profile,
+#user-login {
+	clear: both;
+	margin: 5em auto;
+  max-width: 800px;
+}
+
 .pane-node-body {
 	padding: 1em 0;
 	margin: 0 0 2em;
